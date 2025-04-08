@@ -8,7 +8,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
 while ( have_posts() ) :
 	the_post();
 	?>
@@ -34,7 +33,6 @@ while ( have_posts() ) :
 	</div>
 
 	<?php comments_template(); ?>
-
 </main>
 
 	<?php

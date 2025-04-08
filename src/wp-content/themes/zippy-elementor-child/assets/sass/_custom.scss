@@ -1,0 +1,206 @@
+.top-header {
+  .elementor-widget-text-editor {
+    p {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+.brand-img-slider {
+  .wl-single-brand {
+    img {
+      object-fit: contain;
+      height: 100px;
+    }
+  }
+}
+//menu
+.bot_nav_cat_inner {
+  position: relative;
+  z-index: 1;
+}
+.bot_cat_button {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: start;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 1px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    color: black;
+    .arrow-icon {
+      border-color: black;
+    }
+    .cat_ico_block {
+      span {
+        background-color: black;
+        &::before,
+        &::after {
+          background-color: black;
+        }
+      }
+    }
+  }
+  &.active {
+    background-color: black;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    .arrow-icon {
+      border-color: white;
+      transform: rotate(135deg);
+    }
+    .cat_ico_block {
+      span {
+        background-color: white;
+        &::before,
+        &::after {
+          background-color: white;
+        }
+      }
+    }
+  }
+  .arrow-icon {
+    display: inline-block;
+    margin-left: 8px;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+  }
+}
+.bot_nav_cat_wrap {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1;
+  min-width: 100%;
+  padding: 10px 20px;
+  &.active {
+    border-radius: 0 0 10px 10px;
+    border-width: 0 2px 2px 2px;
+    border-style: solid;
+    border-color: black;
+  }
+  .menu-category-navigation-container {
+    ul.cat_menu {
+      list-style: none;
+      padding-left: 0;
+      li {
+        position: relative;
+        &:has(.sub-menu) {
+          a {
+            &::after {
+              content: "\f105";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 600;
+              position: absolute;
+              right: 0;
+            }
+          }
+          &:hover {
+            .sub-menu {
+              display: block;
+            }
+          }
+        }
+        a {
+          display: block;
+          padding: 10px 0;
+          color: black;
+          border-bottom: 1px solid #ccc;
+          position: relative;
+        }
+        &:last-child {
+          a {
+            border-bottom: none;
+          }
+        }
+      }
+      ul.sub-menu {
+        display: none;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        right: -73%;
+        background: white;
+        z-index: 1000;
+        min-width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 0;
+      }
+    }
+  }
+}
+//hamburger icon
+.cat_ico {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .cat_ico_block {
+    width: 20px;
+    height: 15px;
+    position: relative;
+    cursor: pointer;
+
+    span {
+      display: block;
+      background-color: black;
+      height: 2px;
+      width: 100%;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        background-color: black;
+        height: 2px;
+        width: 100%;
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+
+      &::before {
+        top: -6px;
+      }
+
+      &::after {
+        top: 6px;
+      }
+    }
+  }
+}
+.copy-right {
+  p {
+    margin-bottom: 0;
+  }
+}
+.select2-container--default {
+  .select2-selection--single {
+    height: 40px !important;
+    .select2-selection__rendered {
+      padding: 5px 10px;
+    }
+    .select2-selection__arrow {
+      height: 40px !important;
+    }
+  }
+}

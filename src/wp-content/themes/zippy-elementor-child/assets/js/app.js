@@ -1,15 +1,14 @@
-// import { DisplayLabel } from './components/DisplayLabel';
+jQuery(document).ready(function($) {
+  $('.menu-item-has-children > a:after').on('click', function(e) {
+      e.preventDefault();
+      var $submenu = $(this).parent().find('.sub-menu').first();
+      $('.sub-menu').not($submenu).removeClass('show'); 
+      $submenu.toggleClass('show');
+  });
 
-let Main = {
-  init: async function () {
-
-    // initialize demo javascript component - async/await invokes some 
-    //  level of babel transformation 
-    const displayLabel = new DisplayLabel();
-    await displayLabel.init();
-
-  }
-};
-
-
-// Main.init();
+  $('.bot_cat_button').on('click', function() {
+      $(this).toggleClass('active');
+      $('.bot_nav_cat_wrap').toggleClass('active');
+      $('.bot_nav_cat_wrap').slideToggle();
+  });
+});
